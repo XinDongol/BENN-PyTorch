@@ -3,7 +3,7 @@ Codes for Binary Ensemble Neural Network: More Bits per Network or More Networks
 
 CVPR 2019 [Paper](http://openaccess.thecvf.com/content_CVPR_2019/papers/Zhu_Binary_Ensemble_Neural_Network_More_Bits_per_Network_or_More_CVPR_2019_paper.pdf)
 
-If using the code, please cite our paper: [BibTex](https://scholar.googleusercontent.com/scholar.bib?q=info:H6FM7lSqW_EJ:scholar.google.com/&output=citation&scisdr=CgVN_q1kELej_P-D-dE:AAGBfm0AAAAAXSKG4dFrBBn2csdOlj4BwHlxi6htCY4M&scisig=AAGBfm0AAAAAXSKG4WJt5ECQOvH5NEru1ApeOvNgHKXL&scisf=4&ct=citation&cd=-1&hl=en)
+If using the code, please cite our paper: [BibTex](http://openaccess.thecvf.com/content_CVPR_2019/html/Zhu_Binary_Ensemble_Neural_Network_More_Bits_per_Network_or_More_CVPR_2019_paper.html)
 
 **Notice:** As mentioned in the paper (Section 7) we are aware of the overfitting problem caused by the ensemble technique. If retraining the models, they should basically match the results shown in the paper, but could be slightly higher or lower due to random initialization and overfitting.
 
@@ -101,5 +101,5 @@ only need to modify the files corresponding to the BNN model and the input inter
 
 ## Acknowledgement
 
-The single BNN training part of this code is mostly written by referencing [XNOR-Net](https://arxiv.org/abs/1603.05279). Please consider [citing their paper](https://scholar.googleusercontent.com/scholar.bib?q=info:WStSMAPbnawJ:scholar.google.com/&output=citation&scisdr=CgVN_q1kELej_P-d1oU:AAGBfm0AAAAAXSKYzoUpovtkWoXctc7iVDRMS5U2jkmW&scisig=AAGBfm0AAAAAXSKYzkcmxr9_bLKq7iM5W1gmMwLCMKuy&scisf=4&ct=citation&cd=-1&hl=en) as well if you 
+The single BNN training part of this code is mostly written by referencing [XNOR-Net](https://arxiv.org/abs/1603.05279). Please consider [citing their paper](https://link.springer.com/chapter/10.1007/978-3-319-46493-0_32) as well if you 
 use our code. Based on our testing, XNOR-Net is the most stable and reliable open source BNN training scheme with product-level codes.
