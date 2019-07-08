@@ -64,7 +64,8 @@ Sequential training:
 
 `python main_boosting_cifar10_train_seq.py --arch semibinnet -b b1/b2/b3`
 
-**Notice:** For AB models, you should get around 79-82% accuracy for 32 ensembles. For SB models, you should get around 87-89% accuracy for 32 ensembles.
+**Notice:** For AB models, you should get around 79-82% accuracy for 32 ensembles. For SB models, you should get around 87-89% accuracy for 32 ensembles. The single BNN should have around 69-73% and 83-84% accuracy
+for AB and SB model respectively.
 
 
 ## Train BENN on ImageNet Dataset
@@ -88,7 +89,8 @@ Semi-Binary Network (SB Model), Independent training:
 
 `python main_boosting_imagenet_train_seq.py --arch resnet -b b1/b2/b3`
 
-**Notice:** For AlexNet, you should get around 51-53% (bagging) and 53-55% (boosting) accuracy for 5-6 ensembles. For ResNet-18, you should get around 56-58% (bagging) and 60-62% (boosting) accuracy for 5-6 ensembles. Due to overfitting and optimization, you may need to train BENN multiple times and pick the best one. If you
+**Notice:** For AlexNet, you should get around 51-53% (bagging) and 53-55% (boosting) accuracy for 5-6 ensembles. For ResNet-18, you should get around 56-58% (bagging) and 60-62% (boosting) accuracy for 5-6 ensembles. The single BNN 
+should have accuracy around 44% and 48% for AlexNet and ResNet-18. Due to overfitting and optimization, you may need to train BENN multiple times and pick the best one. If you
 train BENN multiple times, you may end up having a best model that is better than the numbers reported in the paper.
 
 
