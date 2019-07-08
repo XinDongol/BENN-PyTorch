@@ -7,7 +7,7 @@ If using the code, please cite our paper: [BibTex](https://scholar.googleusercon
 
 **Notice:** As mentioned in the paper (Section 7) we are aware of the overfitting problem caused by the ensemble technique. If retraining the models, they should basically match the results shown in the paper, but could be slightly higher or lower due to random initialization and overfitting.
 
-## CheckList
+## Check list
 
 - [ ] Release CIFAR-10 Training Code
 - [ ] Release ImageNet Training Code
@@ -15,7 +15,7 @@ If using the code, please cite our paper: [BibTex](https://scholar.googleusercon
 - [ ] Release ImageNet Pretrained Models
 - [ ] Release FPGA Implementation
 
-## Train BENN on CIFAR-10 Dataset
+## Train BENN on CIFAR-10 dataset
 
 A customized Network-In-Network (NIN) model is used. Please see paper for architecture details.
 
@@ -68,7 +68,7 @@ Sequential training:
 for AB and SB model respectively.
 
 
-## Train BENN on ImageNet Dataset
+## Train BENN on ImageNet dataset
 
 AlexNet and ResNet-18 are used for verifying BENN on ImageNet (2012).
 
@@ -94,3 +94,12 @@ should have accuracy around 44% and 48% for AlexNet and ResNet-18. Due to overfi
 train BENN multiple times, you may end up having a best model that is better than the numbers reported in the paper.
 
 
+## Train BENN on your own network architecture and dataset
+
+To train BENN for your own application, you can directly reuse the BENN training part of this code. Basically you
+only need to modify the files corresponding to the BNN model and the input interface. More details will be provided.
+
+## Acknowledgement
+
+The single BNN training part of this code is mostly written by referencing [XNOR-Net](https://arxiv.org/abs/1603.05279). Please consider [citing their paper](https://scholar.googleusercontent.com/scholar.bib?q=info:WStSMAPbnawJ:scholar.google.com/&output=citation&scisdr=CgVN_q1kELej_P-d1oU:AAGBfm0AAAAAXSKYzoUpovtkWoXctc7iVDRMS5U2jkmW&scisig=AAGBfm0AAAAAXSKYzkcmxr9_bLKq7iM5W1gmMwLCMKuy&scisf=4&ct=citation&cd=-1&hl=en) as well if you 
+use our code. Based on our testing, XNOR-Net is the most stable and reliable open source BNN training scheme with product-level codes.
