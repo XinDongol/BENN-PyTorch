@@ -1,0 +1,3 @@
+CUDA_VISIBLE_DEVICES=1,2,3,0 python main_new.py --boosting_mode SAMME --root_dir ../adam_log_1e-3_alex_80_reset_SAMME_new_512b/ --record_path ../adam_log_1e-3_alex_80_reset_SAMME_new_512b/ | tee SAMME_train.txt
+#CUDA_VISIBLE_DEVICES=0,1,2,3 python main_new.py --boosting_mode mild --root_dir ../adam_log_1e-3_alex_80_reset_mild_new/ --record_path ../adam_log_1e-3_alex_80_reset_mild_new/ | tee mild_train.txt
+#CUDA_VISIBLE_DEVICES=0,1,2,3 python main_new.py --boosting_mode logit --root_dir ../adam_log_1e-3_alex_80_reset_logit_new/ --record_path ../adam_log_1e-3_alex_80_reset_logit_new/ | tee logit_train.txt
