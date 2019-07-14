@@ -28,13 +28,17 @@ A customized Network-In-Network (NIN) model is used. Please see paper for archit
 | MildBoost  |   SB  |  Indp |   0.01 |       80.38 |      87.72 |    Yes   |        23        |    model 2   |          models_nin_indp_mild_0.01          |  Mild_SB_Indp.txt |
 | SAMME      |   SB  |  Seq  |  0.001 |        84.5 |      88.83 |    Yes   |        24        |    model 2   |   models_nin_sampling_SAMME_0.001_epoch_30  |  SAMME_SB_Seq.txt |
 
-### BENN-Bagging
+### Hints
 
 Generally, we have:
 
-:house: 4 different models (you can )
+:house: 2 different models (you can specify with `--arch allbinnet/semibinnet`)
 
+:hourglass_flowing_sand: 2 different training modes (**independent training**, and **sequential training**)
 
+:gear: 4 different ensemble schemes (**Bagging**, **AdaBoost**, **LogitBoost**, **MildBoost**, and **SAMME**)
+
+<!---
 All-Binary Network (AB Model):
     
 Independent training:
@@ -54,7 +58,7 @@ Independent training:
 Sequential training:
 
 `python main_bagging_cifar10_train_seq.py --arch semibinnet`
-
+-->
 
 ### BENN-Boosting
 
