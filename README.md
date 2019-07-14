@@ -3,9 +3,9 @@ Codes for Binary Ensemble Neural Network: More Bits per Network or More Networks
 
 CVPR 2019 [Paper](http://openaccess.thecvf.com/content_CVPR_2019/papers/Zhu_Binary_Ensemble_Neural_Network_More_Bits_per_Network_or_More_CVPR_2019_paper.pdf)
 
-If using the code, please cite our paper: [BibTex](http://openaccess.thecvf.com/content_CVPR_2019/html/Zhu_Binary_Ensemble_Neural_Network_More_Bits_per_Network_or_More_CVPR_2019_paper.html)
+:octocat: If using the code, please cite our paper: [BibTex](http://openaccess.thecvf.com/content_CVPR_2019/html/Zhu_Binary_Ensemble_Neural_Network_More_Bits_per_Network_or_More_CVPR_2019_paper.html)
 
-If you have any question related to the codes or models, please open an issue. If you have general questions about principle of BENN or have any further idea of improving it, please contact us by email: shz338@eng.ucsd.edu, xindong@g.harvard.edu
+If you have any question related to the codes or models, please open an issue. If you have general questions about principle of BENN or have any further idea of improving it, please contact us by email: shz338@eng.ucsd.edu, xindong@g.harvard.edu. Please, no commercial use before getting permission from authors.
 
 **Notice:** As mentioned in the paper (Section 7) we are aware of the overfitting problem caused by the ensemble technique. If retraining the models, they should basically match the results shown in the paper as well as here, but could be either slightly higher or lower due to random initialization, epoch selection, overfitting, etc. If you have a good idea of how to resolve the overfitting issue of ensemble methods, please contact the authors and we can further improve BENN.
 
