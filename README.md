@@ -19,14 +19,14 @@ A customized Network-In-Network (NIN) model is used. Please see paper for archit
 | LogitBoost |   AB  |  Seq  |   0.01 |       62.87 |      82.58 |        30        |   model 2   |  models_allbin_sampling_logit_0.01_epoch_30 |  [L](https://drive.google.com/open?id=1XHeMKAcdjEwW08tLXG3FDfsItqF8jTjr) |
 | LogitBoost |   AB  |  Indp |   0.01 |       69.65 |      82.14 |        21        |   model 2   |        models_allbin_indp_logit_0.01        | [L](https://drive.google.com/open?id=1VMR6QmQgaAKh9vHLPe3Ki_VWJG1NWQYM) |
 | MildBoost  |   AB  |  Seq  | 0.0001 |       67.88 |      79.40 |        27        |   model 2   | models_allbin_sampling_mild_0.0001_epoch_30 |   [L](https://drive.google.com/open?id=1zDUc69ySbMB9OiQshD2zGgqfPErRXqF9)|
-| SAMME      |   AB  |  Indp |  0.001 |       68.72 |      82.04 |        22        |   model 2   |   models_allbin_indp_SAMME_0.001_epoch_30   | SAMME_AB_Indp.txt |
+| SAMME      |   AB  |  Indp |  0.001 |       68.72 |      82.04 |        22        |   model 2   |   models_allbin_indp_SAMME_0.001_epoch_30   | [L](https://drive.google.com/open?id=1StHIYfDdiyVu2XCrH4xALjswC94X07ML) |
 |            |       |       |        |             |            |                  |             |                                             |                   |
-| Bagging    |   SB  |  Seq  |  0.001 |       77.87 |      89.12 |        25        |   model 2   |        bagging1_nin_first_model_0.001       |    Bagging_SB.txt |
-| AdaBoost   |   SB  |  Seq  |   0.01 |       80.33 |      88.12 |        15        |   model 2   |  models_nin_sampling_original_0.01_epoch_30 |    Ada_SB_Seq.txt |
-| LogitBoost |   SB  |  Seq  |  0.001 |       84.23 |       87.9 |        31        |   model 2   |   models_nin_sampling_logit_0.001_epoch_30  |  Logit_SB_Seq.txt |
-| MildBoost  |   SB  |  Seq  |  0.001 |       83.68 |      89.00 |        25        |   model 2   |   models_nin_sampling_mild_0.001_epoch_30   |   Mild_SB_Seq.txt |
-| MildBoost  |   SB  |  Indp |   0.01 |       80.38 |      87.72 |        23        |   model 2   |          models_nin_indp_mild_0.01          |  Mild_SB_Indp.txt |
-| SAMME      |   SB  |  Seq  |  0.001 |        84.5 |      88.83 |        24        |   model 2   |   models_nin_sampling_SAMME_0.001_epoch_30  |  SAMME_SB_Seq.txt |
+| Bagging    |   SB  |  Seq  |  0.001 |       77.87 |      89.12 |        25        |   model 2   |        bagging1_nin_first_model_0.001       |    [L](https://drive.google.com/open?id=1jMm_4ICENzA2fs-wWePBroGTtCtS7NIG) |
+| AdaBoost   |   SB  |  Seq  |   0.01 |       80.33 |      88.12 |        15        |   model 2   |  models_nin_sampling_original_0.01_epoch_30 |    [L](https://drive.google.com/open?id=1YR9kvKhWjbx-pO4pP8743TpUShZi_F7c) |
+| LogitBoost |   SB  |  Seq  |  0.001 |       84.23 |       87.9 |        31        |   model 2   |   models_nin_sampling_logit_0.001_epoch_30  |  [L](https://drive.google.com/open?id=1crSzVBfJ-C5bh27wOb4cH_ZHZQv5c41p) |
+| MildBoost  |   SB  |  Seq  |  0.001 |       83.68 |      89.00 |        25        |   model 2   |   models_nin_sampling_mild_0.001_epoch_30   |   [L](https://drive.google.com/open?id=1agfjAdntT0llIMt9ERFehHBlOS_Ef6_A) |
+| MildBoost  |   SB  |  Indp |   0.01 |       80.38 |      87.72 |        23        |   model 2   |          models_nin_indp_mild_0.01          |  [L](https://drive.google.com/open?id=1mUPoEeFDrkpl0GX77qzGjY1NNO9KiO1b) |
+| SAMME      |   SB  |  Seq  |  0.001 |        84.5 |      88.83 |        24        |   model 2   |   models_nin_sampling_SAMME_0.001_epoch_30  |  [L](https://drive.google.com/open?id=1CcnXGiN6cWePt-S-uf1xjOtE_qLlpUE6) |
 ### Hints
 
 Generally, we have:
