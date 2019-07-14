@@ -5,6 +5,8 @@ CVPR 2019 [Paper](http://openaccess.thecvf.com/content_CVPR_2019/papers/Zhu_Bina
 
 If using the code, please cite our paper: [BibTex](http://openaccess.thecvf.com/content_CVPR_2019/html/Zhu_Binary_Ensemble_Neural_Network_More_Bits_per_Network_or_More_CVPR_2019_paper.html)
 
+If you have any question related to the codes or models, please open an issue. If you have general questions about principle of BENN or have any further idea of improving it, please contact us by email: shz338@eng.ucsd.edu, xindong@g.harvard.edu
+
 **Notice:** As mentioned in the paper (Section 7) we are aware of the overfitting problem caused by the ensemble technique. If retraining the models, they should basically match the results shown in the paper as well as here, but could be either slightly higher or lower due to random initialization, epoch selection, overfitting, etc. If you have a good idea of how to resolve the overfitting issue of ensemble methods, please contact the authors and we can further improve BENN.
 
 ## Train BENN on CIFAR-10 dataset
@@ -37,7 +39,7 @@ Generally, we have:
 
 :gear: 5 different ensemble schemes (**Bagging**, **Boost A**, **Boost B**, **Boost C**, and **Boost D**)
 
-:bar_chart: 2 voting strategies (**Hard Majority Vote**, **Soft Max Vote**)
+:bar_chart: 2 voting strategies (**hard majority vote**, **soft max vote**)
 
 **Notice:** For AB models, you should get around 79-82% accuracy for 32 ensembles. For SB models, you should get around 87-89% accuracy for 32 ensembles (usually 15-20 is a reasonable choice due to overfitting). The single BNN should have around 69-73% and 83-84% accuracy for AB and SB model respectively.
 -->
