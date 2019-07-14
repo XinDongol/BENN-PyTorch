@@ -54,11 +54,10 @@ First download the models from the links above, then run the corresponding pytho
 ```$ python main_bagging_SB.py --epochs 0 --retrain_epochs 0 --root_dir PATH/TO/YOUR/DOWNLOADED/models_bagging_SB/```
 
 **Notice:** For AB models, you should get around 79-82% accuracy for 32 ensembles. For SB models, you should get around 87-89% accuracy for 32 ensembles (usually 15-20 is a reasonable choice due to overfitting). The single BNN should have around 69-73% and 83-84% accuracy for AB and SB model respectively.
--->
 
 ## Train BENN on ImageNet dataset
 
-The codes and pre-trained models on AlexNet and ResNet-18 will be released soon in near future, please stay tuned.
+The codes and pre-trained models on AlexNet and ResNet-18 will be released soon in near future, please stay tuned. We are currently studying overfitting issue and testing the stability of the gain.
 
 **Notice:** For AlexNet, you should get around 50-53% (bagging) and 52-55% (boosting) accuracy for 5-6 ensembles. For ResNet-18, you should get around 56-59% (bagging) and 59-62% (boosting) accuracy for 5-6 ensembles. The single BNN 
 should have accuracy around 44% and 48% for AlexNet and ResNet-18. Be sure to use SB model with independent training, and make sure each BNN is well converged before ensemble. Due to overfitting and optimization instability as observed in Section 6.2 from the paper, you may want to train BENN multiple times and pick the best one.
