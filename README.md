@@ -11,23 +11,22 @@ If using the code, please cite our paper: [BibTex](http://openaccess.thecvf.com/
 
 A customized Network-In-Network (NIN) model is used. Please see paper for architecture details.
 
-| Ensemble   | Model | Train |     LR | BNN (start) | BENN (end) | Verified | Overfitting from | Best Voting  |               Models Directory              |              Logs |
-|------------|:-----:|:-----:|-------:|------------:|-----------:|:--------:|:----------------:|:------------:|:-------------------------------------------:|------------------:|
-| Bagging    |   AB  |  Seq  | 0.0001 |       67.35 |      81.32 |    Yes   |        20        |    model 2   |            bagging1_allbin_0.0001           |    Bagging_AB.txt |
-| AdaBoost   |   AB  |  Seq  |   0.01 |       67.08 |      81.93 |    Yes   |        25        |    model 2   |     models_allbin_original_0.01_epoch_30    |    Ada_AB_Seq.txt |
-| AdaBoost   |   AB  |  Indp |   0.01 |       70.59 |      82.12 |    Yes   |        20        |    model 2   |       models_allbin_indp_original_0.01      |   Ada_AB_Indp.txt |
-| LogitBoost |   AB  |  Seq  |   0.01 |       62.87 |      82.58 |    Yes   |        30        |    model 2   |  models_allbin_sampling_logit_0.01_epoch_30 |  Logit_AB_Seq.txt |
-| LogitBoost |   AB  |  Indp |   0.01 |       69.65 |      82.14 |    Yes   |        21        |    model 2   |        models_allbin_indp_logit_0.01        | Logit_AB_Indp.txt |
-| MildBoost  |   AB  |  Seq  | 0.0001 |       67.88 |      79.40 |    Yes   |        27        |    model 2   | models_allbin_sampling_mild_0.0001_epoch_30 |   Mild_AB_Seq.txt |
-| SAMME      |   AB  |  Indp |  0.001 |       68.72 |      82.04 |    Yes   |        22        |    model 2   |   models_allbin_indp_SAMME_0.001_epoch_30   | SAMME_AB_Indp.txt |
-|            |       |       |        |             |            |          |                  |              |                                             |                   |
-| Bagging    |   SB  |  Seq  |  0.001 |       77.87 |      89.12 |    Yes   |        25        |    model 2   |        bagging1_nin_first_model_0.001       |    Bagging_SB.txt |
-| AdaBoost   |   SB  |  Seq  |   0.01 |       80.33 |      88.12 |    Yes   |        15        |    model 2   |  models_nin_sampling_original_0.01_epoch_30 |    Ada_SB_Seq.txt |
-| LogitBoost |   SB  |  Seq  |  0.001 |       84.23 |       87.9 |    Yes   |        31        |    model 2   |   models_nin_sampling_logit_0.001_epoch_30  |  Logit_SB_Seq.txt |
-| MildBoost  |   SB  |  Seq  |  0.001 |       83.68 |      89.00 |    Yes   |        25        |    model 2   |   models_nin_sampling_mild_0.001_epoch_30   |   Mild_SB_Seq.txt |
-| MildBoost  |   SB  |  Indp |   0.01 |       80.38 |      87.72 |    Yes   |        23        |    model 2   |          models_nin_indp_mild_0.01          |  Mild_SB_Indp.txt |
-| SAMME      |   SB  |  Seq  |  0.001 |        84.5 |      88.83 |    Yes   |        24        |    model 2   |   models_nin_sampling_SAMME_0.001_epoch_30  |  SAMME_SB_Seq.txt |
-
+| Ensemble   | Model | Train |     LR | BNN (start) | BENN (end) | Overfitting from | Best Voting |               Models Directory              |              Logs |
+|------------|:-----:|:-----:|-------:|------------:|-----------:|:----------------:|:-----------:|:-------------------------------------------:|------------------:|
+| Bagging    |   AB  |  Seq  | 0.0001 |       67.35 |      81.32 |        20        |   model 2   |            bagging1_allbin_0.0001           |    [L](https://drive.google.com/open?id=1J8c1cDiDPIPcFr3-JZN11rwWa8AfCjMw) |
+| AdaBoost   |   AB  |  Seq  |   0.01 |       67.08 |      81.93 |        25        |   model 2   |     models_allbin_original_0.01_epoch_30    |    [L](https://drive.google.com/open?id=1V0Lu6qRxrO6RA3LeeeHZJewvwrSvcVZL) |
+| AdaBoost   |   AB  |  Indp |   0.01 |       70.59 |      82.12 |        20        |   model 2   |       models_allbin_indp_original_0.01      |   [L](https://drive.google.com/open?id=1ODDG_tuKZZvZBbJLdHsvIoiewcWDu7_3) |
+| LogitBoost |   AB  |  Seq  |   0.01 |       62.87 |      82.58 |        30        |   model 2   |  models_allbin_sampling_logit_0.01_epoch_30 |  [L](https://drive.google.com/open?id=1XHeMKAcdjEwW08tLXG3FDfsItqF8jTjr) |
+| LogitBoost |   AB  |  Indp |   0.01 |       69.65 |      82.14 |        21        |   model 2   |        models_allbin_indp_logit_0.01        | [L](https://drive.google.com/open?id=1VMR6QmQgaAKh9vHLPe3Ki_VWJG1NWQYM) |
+| MildBoost  |   AB  |  Seq  | 0.0001 |       67.88 |      79.40 |        27        |   model 2   | models_allbin_sampling_mild_0.0001_epoch_30 |   [L](https://drive.google.com/open?id=1zDUc69ySbMB9OiQshD2zGgqfPErRXqF9)|
+| SAMME      |   AB  |  Indp |  0.001 |       68.72 |      82.04 |        22        |   model 2   |   models_allbin_indp_SAMME_0.001_epoch_30   | SAMME_AB_Indp.txt |
+|            |       |       |        |             |            |                  |             |                                             |                   |
+| Bagging    |   SB  |  Seq  |  0.001 |       77.87 |      89.12 |        25        |   model 2   |        bagging1_nin_first_model_0.001       |    Bagging_SB.txt |
+| AdaBoost   |   SB  |  Seq  |   0.01 |       80.33 |      88.12 |        15        |   model 2   |  models_nin_sampling_original_0.01_epoch_30 |    Ada_SB_Seq.txt |
+| LogitBoost |   SB  |  Seq  |  0.001 |       84.23 |       87.9 |        31        |   model 2   |   models_nin_sampling_logit_0.001_epoch_30  |  Logit_SB_Seq.txt |
+| MildBoost  |   SB  |  Seq  |  0.001 |       83.68 |      89.00 |        25        |   model 2   |   models_nin_sampling_mild_0.001_epoch_30   |   Mild_SB_Seq.txt |
+| MildBoost  |   SB  |  Indp |   0.01 |       80.38 |      87.72 |        23        |   model 2   |          models_nin_indp_mild_0.01          |  Mild_SB_Indp.txt |
+| SAMME      |   SB  |  Seq  |  0.001 |        84.5 |      88.83 |        24        |   model 2   |   models_nin_sampling_SAMME_0.001_epoch_30  |  SAMME_SB_Seq.txt |
 ### Hints
 
 Generally, we have:
@@ -58,7 +57,7 @@ Independent training:
 Sequential training:
 
 `python main_bagging_cifar10_train_seq.py --arch semibinnet`
--->
+
 
 ### BENN-Boosting
 
@@ -87,7 +86,7 @@ Sequential training:
 
 **Notice:** For AB models, you should get around 79-82% accuracy for 32 ensembles. For SB models, you should get around 87-89% accuracy for 32 ensembles. The single BNN should have around 69-73% and 83-84% accuracy
 for AB and SB model respectively.
-
+-->
 
 ## Train BENN on ImageNet dataset
 
