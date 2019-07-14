@@ -5,7 +5,7 @@ CVPR 2019 [Paper](http://openaccess.thecvf.com/content_CVPR_2019/papers/Zhu_Bina
 
 If using the code, please cite our paper: [BibTex](http://openaccess.thecvf.com/content_CVPR_2019/html/Zhu_Binary_Ensemble_Neural_Network_More_Bits_per_Network_or_More_CVPR_2019_paper.html)
 
-**Notice:** As mentioned in the paper (Section 7) we are aware of the overfitting problem caused by the ensemble technique. If retraining the models, they should basically match the results shown in the paper, but could be slightly higher or lower due to random initialization and overfitting.
+**Notice:** As mentioned in the paper (Section 7) we are aware of the overfitting problem caused by the ensemble technique. If retraining the models, they should basically match the results shown in the paper as well as here, but could be either slightly higher or lower due to random initialization, epoch selection, overfitting, etc.
 
 ## Train BENN on CIFAR-10 dataset
 
@@ -17,7 +17,7 @@ A customized Network-In-Network (NIN) model is used. Please see paper for archit
 | BoostA   |   AB  |  Seq  |   0.01 |       67.08 |      81.93 |        25        |   model 2   |     [models_boostA_AB_seq](https://drive.google.com/open?id=181YNIyFWlkMH30xTWxy3A0Pm5hBbBAnD)    |    [L](https://drive.google.com/open?id=1V0Lu6qRxrO6RA3LeeeHZJewvwrSvcVZL) |
 | BoostA   |   AB  |  Indp |   0.01 |       70.59 |      82.12 |        20        |   model 2   |       [models_boostA_AB_indp](https://drive.google.com/open?id=17mwH0zc_ojissgNlu7im1-W2hSsb7nDo)      |   [L](https://drive.google.com/open?id=1ODDG_tuKZZvZBbJLdHsvIoiewcWDu7_3) |
 | BoostB |   AB  |  Seq  |   0.01 |       62.87 |      82.58 |        30        |   model 2   |  [models_boostB_AB_seq](https://drive.google.com/open?id=1tonq6We35NVH6xEr9FpE-En7l2o4Q-1z) |  [L](https://drive.google.com/open?id=1XHeMKAcdjEwW08tLXG3FDfsItqF8jTjr) |
-| BoostB |   AB  |  Indp |   0.01 |       69.65 |      82.14 |        21        |   model 2   |        [models_boostB_AB_indp](https://drive.google.com/open?id=1gSe53ExXjxIxJpqw6j19HXfi08kmzQsQ)        | [L](https://drive.google.com/open?id=1VMR6QmQgaAKh9vHLPe3Ki_VWJG1NWQYM) |
+| BoostB |   AB  |  Indp |   0.01 |       69.65 |      82.13 |        21        |   model 2   |        [models_boostB_AB_indp](https://drive.google.com/open?id=1gSe53ExXjxIxJpqw6j19HXfi08kmzQsQ)        | [L](https://drive.google.com/open?id=1VMR6QmQgaAKh9vHLPe3Ki_VWJG1NWQYM) |
 | BoostC  |   AB  |  Seq  | 0.0001 |       67.88 |      79.40 |        27        |   model 2   | [models_boostC_AB_seq](https://drive.google.com/open?id=1iQSflQg5P3HcD5CGIU_Rz-mGQJv6zx22) |   [L](https://drive.google.com/open?id=1zDUc69ySbMB9OiQshD2zGgqfPErRXqF9)|
 | BoostD      |   AB  |  Indp |  0.001 |       68.72 |      82.04 |        22        |   model 2   |   [models_boostD_AB_indp](https://drive.google.com/open?id=1uuGlTBsJ6vTIIe620otnsHcL6nwzJBqS)   | [L](https://drive.google.com/open?id=1StHIYfDdiyVu2XCrH4xALjswC94X07ML) |
 |            |       |       |        |             |            |                  |             |                                             |                   |
@@ -31,29 +31,26 @@ A customized Network-In-Network (NIN) model is used. Please see paper for archit
 
 Generally, we have:
 
-:house: 2 different models (you can specify with `--arch allbinnet/semibinnet`)
+:house: 2 different models (you can specify with `--arch allbinnet/nin`), corresponding to AB and SB models in the paper
 
 :hourglass_flowing_sand: 2 different training modes (**independent training**, and **sequential training**)
 
 :gear: 5 different ensemble schemes (**Bagging**, **Boost A**, **Boost B**, **Boost C**, and **Boost D**)
 
-**Notice:** For AB models, you should get around 79-82% accuracy for 32 ensembles. For SB models, you should get around 87-89% accuracy for 32 ensembles (usually 15-20 is a reasonable choice). The single BNN should have around 69-73% and 83-84% accuracy
-for AB and SB model respectively.
+**Notice:** For AB models, you should get around 79-82% accuracy for 32 ensembles. For SB models, you should get around 87-89% accuracy for 32 ensembles (usually 15-20 is a reasonable choice due to overfitting). The single BNN should have around 69-73% and 83-84% accuracy for AB and SB model respectively.
 -->
 
 ## Train BENN on ImageNet dataset
 
 The codes and pre-trained models on AlexNet and ResNet-18 will be released soon in near future, please stay tuned.
 
-**Notice:** For AlexNet, you should get around 51-53% (bagging) and 53-55% (boosting) accuracy for 5-6 ensembles. For ResNet-18, you should get around 56-58% (bagging) and 60-62% (boosting) accuracy for 5-6 ensembles. The single BNN 
-should have accuracy around 44% and 48% for AlexNet and ResNet-18. Due to overfitting and optimization, you may need to train BENN multiple times and pick the best one. If you
-train BENN multiple times, you may end up having a best model that is better than the numbers reported in the paper.
+**Notice:** For AlexNet, you should get around 50-53% (bagging) and 52-55% (boosting) accuracy for 5-6 ensembles. For ResNet-18, you should get around 56-59% (bagging) and 59-62% (boosting) accuracy for 5-6 ensembles. The single BNN 
+should have accuracy around 44% and 48% for AlexNet and ResNet-18. Due to overfitting and optimization instability, you may want to train BENN multiple times and pick the best one.
 
 
 ## Train BENN on your own network architecture and dataset
 
-To train BENN for your own application, you can directly reuse the BENN training part of this code. Basically you
-only need to modify the files corresponding to the BNN model and the input interface. More details will be provided.
+To train BENN for your own application, you can directly reuse the BENN training part of this code. More details will be provided. If you successfully train BENN on some new applications with new architectures and achieve satisfying performance, please contact the authors and we will add a link here.
 
 ## Acknowledgement
 
