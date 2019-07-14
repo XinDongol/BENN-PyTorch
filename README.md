@@ -5,7 +5,7 @@ CVPR 2019 [Paper](http://openaccess.thecvf.com/content_CVPR_2019/papers/Zhu_Bina
 
 If using the code, please cite our paper: [BibTex](http://openaccess.thecvf.com/content_CVPR_2019/html/Zhu_Binary_Ensemble_Neural_Network_More_Bits_per_Network_or_More_CVPR_2019_paper.html)
 
-**Notice:** As mentioned in the paper (Section 7) we are aware of the overfitting problem caused by the ensemble technique. If retraining the models, they should basically match the results shown in the paper as well as here, but could be either slightly higher or lower due to random initialization, epoch selection, overfitting, etc.
+**Notice:** As mentioned in the paper (Section 7) we are aware of the overfitting problem caused by the ensemble technique. If retraining the models, they should basically match the results shown in the paper as well as here, but could be either slightly higher or lower due to random initialization, epoch selection, overfitting, etc. If you have a good idea of how to resolve the overfitting issue of ensemble methods, please contact the authors and we can further improve BENN.
 
 ## Train BENN on CIFAR-10 dataset
 
@@ -45,7 +45,7 @@ Generally, we have:
 The codes and pre-trained models on AlexNet and ResNet-18 will be released soon in near future, please stay tuned.
 
 **Notice:** For AlexNet, you should get around 50-53% (bagging) and 52-55% (boosting) accuracy for 5-6 ensembles. For ResNet-18, you should get around 56-59% (bagging) and 59-62% (boosting) accuracy for 5-6 ensembles. The single BNN 
-should have accuracy around 44% and 48% for AlexNet and ResNet-18. Due to overfitting and optimization instability, you may want to train BENN multiple times and pick the best one.
+should have accuracy around 44% and 48% for AlexNet and ResNet-18. Due to overfitting and optimization instability as observed in Section 6.2 from the paper, you may want to train BENN multiple times and pick the best one.
 
 
 ## Train BENN on your own network architecture and dataset
@@ -59,7 +59,7 @@ use our code. Based on our testing, XNOR-Net is the most stable and reliable ope
 
 ## Check list
 
-- [ ] Release CIFAR-10 Training Code
-- [ ] Release CIFAR-10 Pretrained Models
+- [x] Release CIFAR-10 Training Code
+- [x] Release CIFAR-10 Pretrained Models
 - [ ] Release ImageNet Training Code
 - [ ] Release ImageNet Pretrained Models
