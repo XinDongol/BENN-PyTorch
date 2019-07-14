@@ -7,18 +7,33 @@ If using the code, please cite our paper: [BibTex](http://openaccess.thecvf.com/
 
 **Notice:** As mentioned in the paper (Section 7) we are aware of the overfitting problem caused by the ensemble technique. If retraining the models, they should basically match the results shown in the paper, but could be slightly higher or lower due to random initialization and overfitting.
 
-## Check list
-
-- [ ] Release CIFAR-10 Training Code
-- [ ] Release CIFAR-10 Pretrained Models
-- [ ] Release ImageNet Training Code
-- [ ] Release ImageNet Pretrained Models
-
 ## Train BENN on CIFAR-10 dataset
 
 A customized Network-In-Network (NIN) model is used. Please see paper for architecture details.
 
+| Ensemble   | Model | Train |     LR | BNN (start) | BENN (end) | Verified | Overfitting from | Best Voting  |               Models Directory              |              Logs |
+|------------|:-----:|:-----:|-------:|------------:|-----------:|:--------:|:----------------:|:------------:|:-------------------------------------------:|------------------:|
+| Bagging    |   AB  |  Seq  | 0.0001 |       67.35 |      81.32 |    Yes   |        20        |    model 2   |            bagging1_allbin_0.0001           |    Bagging_AB.txt |
+| AdaBoost   |   AB  |  Seq  |   0.01 |       67.08 |      81.93 |    Yes   |        25        |    model 2   |     models_allbin_original_0.01_epoch_30    |    Ada_AB_Seq.txt |
+| AdaBoost   |   AB  |  Indp |   0.01 |       70.59 |      82.12 |    Yes   |        20        |    model 2   |       models_allbin_indp_original_0.01      |   Ada_AB_Indp.txt |
+| LogitBoost |   AB  |  Seq  |   0.01 |       62.87 |      82.58 |    Yes   |        30        |    model 2   |  models_allbin_sampling_logit_0.01_epoch_30 |  Logit_AB_Seq.txt |
+| LogitBoost |   AB  |  Indp |   0.01 |       69.65 |      82.14 |    Yes   |        21        |    model 2   |        models_allbin_indp_logit_0.01        | Logit_AB_Indp.txt |
+| MildBoost  |   AB  |  Seq  | 0.0001 |       67.88 |      79.40 |    Yes   |        27        |    model 2   | models_allbin_sampling_mild_0.0001_epoch_30 |   Mild_AB_Seq.txt |
+| SAMME      |   AB  |  Indp |  0.001 |       68.72 |      82.04 |    Yes   |        22        |    model 2   |   models_allbin_indp_SAMME_0.001_epoch_30   | SAMME_AB_Indp.txt |
+|            |       |       |        |             |            |          |                  |              |                                             |                   |
+| Bagging    |   SB  |  Seq  |  0.001 |       77.87 |      89.12 |    Yes   |        25        |    model 2   |        bagging1_nin_first_model_0.001       |    Bagging_SB.txt |
+| AdaBoost   |   SB  |  Seq  |   0.01 |       80.33 |      88.12 |    Yes   |        15        |    model 2   |  models_nin_sampling_original_0.01_epoch_30 |    Ada_SB_Seq.txt |
+| LogitBoost |   SB  |  Seq  |  0.001 |       84.23 |       87.9 |    Yes   |        31        |    model 2   |   models_nin_sampling_logit_0.001_epoch_30  |  Logit_SB_Seq.txt |
+| MildBoost  |   SB  |  Seq  |  0.001 |       83.68 |      89.00 |    Yes   |        25        |    model 2   |   models_nin_sampling_mild_0.001_epoch_30   |   Mild_SB_Seq.txt |
+| MildBoost  |   SB  |  Indp |   0.01 |       80.38 |      87.72 |    Yes   |        23        |    model 2   |          models_nin_indp_mild_0.01          |  Mild_SB_Indp.txt |
+| SAMME      |   SB  |  Seq  |  0.001 |        84.5 |      88.83 |    Yes   |        24        |    model 2   |   models_nin_sampling_SAMME_0.001_epoch_30  |  SAMME_SB_Seq.txt |
+
 ### BENN-Bagging
+
+Generally, we have:
+
+:house: 4 different models (you can )
+
 
 All-Binary Network (AB Model):
     
@@ -88,3 +103,10 @@ only need to modify the files corresponding to the BNN model and the input inter
 
 The single BNN training part of this code is mostly written by referencing [XNOR-Net](https://arxiv.org/abs/1603.05279) and Jiecao Yu's [implementation](https://github.com/jiecaoyu/XNOR-Net-PyTorch). Please consider them as well if you 
 use our code. Based on our testing, XNOR-Net is the most stable and reliable open source BNN training scheme with product-level codes.
+
+## Check list
+
+- [ ] Release CIFAR-10 Training Code
+- [ ] Release CIFAR-10 Pretrained Models
+- [ ] Release ImageNet Training Code
+- [ ] Release ImageNet Pretrained Models
