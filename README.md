@@ -10,10 +10,9 @@ If using the code, please cite our paper: [BibTex](http://openaccess.thecvf.com/
 ## Check list
 
 - [ ] Release CIFAR-10 Training Code
-- [ ] Release ImageNet Training Code
 - [ ] Release CIFAR-10 Pretrained Models
+- [ ] Release ImageNet Training Code
 - [ ] Release ImageNet Pretrained Models
-- [ ] Release FPGA Implementation
 
 ## Train BENN on CIFAR-10 dataset
 
@@ -44,6 +43,9 @@ Sequential training:
 
 ### BENN-Boosting
 
+We offer 3 different boosting options which can be switched by `-b` argument as shown below. You can try more 
+boosting strategies as well.
+
 All-Binary Network (AB Model):
     
 Independent training:
@@ -70,24 +72,7 @@ for AB and SB model respectively.
 
 ## Train BENN on ImageNet dataset
 
-AlexNet and ResNet-18 are used for verifying BENN on ImageNet (2012).
-
-### BENN-Bagging
-
-Semi-Binary Network (SB Model), Independent training:
-
-`python main_bagging_imagenet_train_indp.py --arch AlexNet`
-
-`python main_bagging_imagenet_train_indp.py --arch resnet`
-
-
-### BENN-Boosting
-
-Semi-Binary Network (SB Model), Independent training:
-
-`python main_boosting_imagenet_train_seq.py --arch AlexNet -b b1/b2/b3`
-
-`python main_boosting_imagenet_train_seq.py --arch resnet -b b1/b2/b3`
+The codes and pre-trained models on AlexNet and ResNet-18 will be released soon in near future, please stay tuned.
 
 **Notice:** For AlexNet, you should get around 51-53% (bagging) and 53-55% (boosting) accuracy for 5-6 ensembles. For ResNet-18, you should get around 56-58% (bagging) and 60-62% (boosting) accuracy for 5-6 ensembles. The single BNN 
 should have accuracy around 44% and 48% for AlexNet and ResNet-18. Due to overfitting and optimization, you may need to train BENN multiple times and pick the best one. If you
