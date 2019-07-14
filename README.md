@@ -28,7 +28,7 @@ A customized Network-In-Network (NIN) model is used. Please see paper for archit
 | BoostB |   SB  |  Seq  |  0.001 |       84.23 |       87.9 |        31        |   Soft Max Vote   |   [models_boostB_SB_seq](https://drive.google.com/open?id=11bx-iEIpKLf7cF27OpXNMH61UD-6n1bN)  |  [L](https://drive.google.com/open?id=1crSzVBfJ-C5bh27wOb4cH_ZHZQv5c41p) |
 | BoostC  |   SB  |  Seq  |  0.001 |       83.68 |      89.00 |        25        |   Soft Max Vote   |   [models_boostC_SB_seq](https://drive.google.com/open?id=1_myF7GbhOJGcb64g0z6xzuFt4s7ywmiu)   |   [L](https://drive.google.com/open?id=1agfjAdntT0llIMt9ERFehHBlOS_Ef6_A) |
 | BoostC  |   SB  |  Indp |   0.01 |       80.38 |      87.72 |        23        |   Soft Max Vote   |          [models_boostC_SB_indp](https://drive.google.com/open?id=1dNBKR88sSA2-R98yc_3TmFAxUZaED3S8)          |  [L](https://drive.google.com/open?id=1mUPoEeFDrkpl0GX77qzGjY1NNO9KiO1b) |
-| BoostD      |   SB  |  Seq  |  0.001 |        84.5 |      88.83 |        24        |   model 2   |   [models_boostD_SB_seq](https://drive.google.com/open?id=1mhnJFbs3knOsSr-B-YAt1S5v-j29ksJJ)  |  [L](https://drive.google.com/open?id=1CcnXGiN6cWePt-S-uf1xjOtE_qLlpUE6) |
+| BoostD      |   SB  |  Seq  |  0.001 |        84.5 |      88.83 |        24        |   Soft Max Vote   |   [models_boostD_SB_seq](https://drive.google.com/open?id=1mhnJFbs3knOsSr-B-YAt1S5v-j29ksJJ)  |  [L](https://drive.google.com/open?id=1CcnXGiN6cWePt-S-uf1xjOtE_qLlpUE6) |
 ### Hints
 
 Generally, we have:
@@ -40,6 +40,18 @@ Generally, we have:
 :gear: 5 different ensemble schemes (**Bagging**, **Boost A**, **Boost B**, **Boost C**, and **Boost D**)
 
 :bar_chart: 2 voting strategies (**hard majority vote**, **soft max vote**)
+
+### Retrain models
+
+For example:
+
+`python main_bagging_SB.py --epochs 0 --retrain_epochs 100 --root_dir PATH/TO/YOUR/models_bagging_SB/`
+
+### Test pre-trained models
+
+First download the models from the links above, then run the corresponding python script to test pre-trained models and you should get the exact same numbers comparing with our logs above. For example:
+
+`python main_bagging_SB.py --epochs 0 --retrain_epochs 0 --root_dir PATH/TO/YOUR/DOWNLOADED/models_bagging_SB/`
 
 **Notice:** For AB models, you should get around 79-82% accuracy for 32 ensembles. For SB models, you should get around 87-89% accuracy for 32 ensembles (usually 15-20 is a reasonable choice due to overfitting). The single BNN should have around 69-73% and 83-84% accuracy for AB and SB model respectively.
 -->
