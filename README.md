@@ -86,5 +86,5 @@ only need to modify the files corresponding to the BNN model and the input inter
 
 ## Acknowledgement
 
-The single BNN training part of this code is mostly written by referencing [XNOR-Net](https://arxiv.org/abs/1603.05279). Please consider [citing their paper](https://link.springer.com/chapter/10.1007/978-3-319-46493-0_32) as well if you 
+The single BNN training part of this code is mostly written by referencing [XNOR-Net](https://arxiv.org/abs/1603.05279) and Jiecao Yu's [implementation](https://github.com/jiecaoyu/XNOR-Net-PyTorch). Please consider them as well if you 
 use our code. Based on our testing, XNOR-Net is the most stable and reliable open source BNN training scheme with product-level codes.
