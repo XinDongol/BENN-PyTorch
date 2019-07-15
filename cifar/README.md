@@ -16,7 +16,7 @@ Generally, we require:
 
 Use the below command to install the environment:
 
-`$ pip install -r requirements.txt`
+`$ pip install -r requirement.txt`
 
 ## Retrain BENN models
 
