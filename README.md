@@ -57,11 +57,31 @@ First download the models from the links above, then run the corresponding pytho
 
 ## Train BENN on ImageNet dataset
 
-The codes and pre-trained models on AlexNet and ResNet-18 will be released soon in near future, please stay tuned. We are currently studying overfitting issue and testing the stability of the gain.
+**Notice:** Be sure to use SB model, and make sure each BNN is well converged before ensemble. Due to overfitting and optimization instability as observed in Section 6.2 from the paper, you may want to train BENN multiple times and pick the best combination. 
+You may also explore model search on BENN.
 
-**Notice:** For AlexNet, you should get around 50-53% (bagging) and 52-55% (boosting) accuracy for 5-6 ensembles. For ResNet-18, you should get around 56-59% (bagging) and 59-62% (boosting) accuracy for 5-6 ensembles. The single BNN 
-should have accuracy around 44% and 48% for AlexNet and ResNet-18. Be sure to use SB model with independent training, and make sure each BNN is well converged before ensemble. Due to overfitting and optimization instability as observed in Section 6.2 from the paper, you may want to train BENN multiple times and pick the best one.
+ResNet-18 is presented here for best performance. We are currently testing the stability of gain of more ensembles up to 10 BNNs so please stay tuned. More uploaded models are coming soon (i.e., BENN-6 and BENN-10).
 
+| Ensemble   | Model | Train |     LR | BNN | BENN-3 Ensemble | Best Voting |               Models Directory              |              Logs |
+|------------|:-----:|:-----:|-------:|------------:|-----------:|:-----------:|:-------------------------------------------:|:-------------------------------------------:|
+| Bagging    |   SB  |  Indp  | 0.001 |       48.87 |      54.34 | Soft Max Vote   |            [models](https://drive.google.com/drive/folders/1PGtvNu_KE9Zg3FUCtwjcxP6Tw-QC8-ef?usp=sharing)           |            [logs](https://drive.google.com/file/d/1O4MeHMZpQ-zGxkpfeXnS3jaJk3jz3EaF/view?usp=sharing)           |
+| Boost   |   SB  |  Indp  |   0.001 |       48.87 |      55.83 | Soft Max Vote   |     [models](https://drive.google.com/drive/folders/1jK4ujcS7xVsrl6JGXv2eBIvHPp8P23Rk?usp=sharing)    |            [logs](https://drive.google.com/file/d/1V5xWYKVQzr9qCwZqzYx27cAme5DKgHwC/view?usp=sharing)           |
+
+
+### Retrain models
+
+For example:
+
+`$ python2 main_bagging_imagenet.py --epochs 0 --retrain_epochs 100 --root_dir PATH/TO/YOUR/models_bagging/`
+
+### Test pre-trained models
+
+For example:
+
+```$ python2 main_bagging_imagenet.py --epochs 0 --retrain_epochs 0 --root_dir PATH/TO/YOUR/DOWNLOADED/models_bagging/```
+
+As for other arguments, please refer to the head of the code for explanation. The retrained models will have different performance
+each time so feel free to play with multiple settings.
 
 ## Train BENN on your own network architecture and dataset
 
@@ -76,5 +96,6 @@ use our code. Based on our testing, XNOR-Net is the most stable and reliable ope
 
 - [x] Release CIFAR-10 Training Code
 - [x] Release CIFAR-10 Pretrained Models
-- [ ] Release ImageNet Training Code
-- [ ] Release ImageNet Pretrained Models
+- [x] Release ImageNet Training Code
+- [x] Release ImageNet Pretrained Models
+- [ ] Release Additional ImageNet Pretrained Models
